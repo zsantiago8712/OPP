@@ -8,35 +8,12 @@ public class MainFile {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int nEmpleados = Integer.valueOf(br.readLine()).intValue();
-        String[] ids = new String[nEmpleados];
-        double[] horasTrabajadas = new double[nEmpleados];
-        String[] nombres = new String[nEmpleados];
-        double[] nSuealdo = new double[nEmpleados];
-        int i;
-        double totalPagos = 0;
+        Empleado emp1 = new Empleado("1234", "Santiago", "Zamora", 3, 300);
+        Empleado emp2 = new Empleado("1235", "Daniel", "Muños", 5, 100);
 
+        System.out.println("El salario del empleado " + emp1.name + ": " + emp1.calcularSalario());
+        System.out.println("El salario del empleado " + emp2.name + ": " + emp2.calcularSalario());
 
-
-
-        for(i = 0; i < nEmpleados; i++){
-            System.out.println("Escriba nombre del empleado: ");
-            nombres[i] = br.readLine();
-
-            System.out.println("Escibra su Id: ");
-            ids[i] = br.readLine();
-
-            System.out.println("Escibra el numero de horas trabajadas: ");
-            horasTrabajadas[i] = Double.valueOf(br.readLine()).doubleValue();
-
-            System.out.println("Escriba el su suealdo: ");
-            nSuealdo[i] = Double.valueOf(br.readLine()).doubleValue();
-
-            System.out.println("Suelado por hora del empleado: " + horasTrabajadas[i] * nSuealdo[i]);
-            totalPagos += horasTrabajadas[i] * nSuealdo[i];
-        }
-
-        System.out.println("El total a pagar: " + totalPagos);
+        //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     }
 }

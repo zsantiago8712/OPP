@@ -34,7 +34,7 @@ public class Alumno extends Usuarios{
         return true;
     }
 
-     public String getNombreCompleto(){ return this.getNombreCompleto(); }
+     public String getNombre(){ return this.getNombreCompleto(); }
 
     public int getSemestre() {
         return semestre;

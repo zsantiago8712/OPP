@@ -5,16 +5,18 @@ public class Maestro extends Usuarios{
     private int numMateriasInpartidas;
     private int numHorasClase;
     private double sueldo;
-    private String materias[];
+    private String materia;
 
 
-    Maestro(String nombre, String apellidos, int edad, int numMateriasInpartidas, int numHorasClase, double sueldo){
+
+    Maestro(String nombre, String apellidos, int edad, int numMateriasInpartidas, int numHorasClase,
+            double sueldo, String materia){
         super(nombre, apellidos, edad);
 
         this.numMateriasInpartidas = numMateriasInpartidas;
         this.numHorasClase = numHorasClase;
         this.sueldo = sueldo;
-        this.materias = new String[numMateriasInpartidas];
+        this.materia = materia;
     }
 
     public boolean prestamo(String nombreLibro){
@@ -29,13 +31,9 @@ public class Maestro extends Usuarios{
         return sueldo;
     }
 
-    public void setMaterias(String ... materias) {
 
-        for(int i = 0; i < this.numMateriasInpartidas; i++)
-            this.materias[i] = materias[i];
-    }
 
-    public String getNombreCompleto(){ return this.getNombreCompleto(); }
+    public String getNombre(){ return this.getNombreCompleto(); }
 
     public int getNumMateriasInpartidas() {
         return numMateriasInpartidas;
@@ -45,7 +43,7 @@ public class Maestro extends Usuarios{
         return numHorasClase;
     }
 
-    public String[] getMaterias() {
-        return materias;
+    public String getMateria() {
+        return materia;
     }
 }

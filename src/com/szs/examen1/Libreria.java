@@ -3,11 +3,10 @@ package com.szs.examen1;
 import java.util.Arrays;
 
 public class Libreria {
+
+
     private String nombre;
     private Alumno alumno;
-
-
-
     private Maestro maestro;
     private int numLibrosDisponibles;
 
@@ -16,14 +15,14 @@ public class Libreria {
         this.nombre = nombre;
     }
 
-    public void setAlumno(String nombre, String apellidos,  int edad, String carrera,
+    public void setNewAlumno(String nombre, String apellidos,  int edad, String carrera,
                           int semestre, double promedio, int numMateriasInscritas){
         alumno = new Alumno(nombre, apellidos, edad, carrera, semestre, promedio, numMateriasInscritas);
     }
 
-    public void setMaestro(String nombre, String apellidos,  int edad, int numMateriasInpartidas,
-                           int numHorasClase, double sueldo) {
-        maestro = new Maestro(nombre, apellidos, edad, numMateriasInpartidas, numHorasClase, sueldo);
+    public void setNewMaestro(String nombre, String apellidos,  int edad, int numMateriasInpartidas,
+                           int numHorasClase, double sueldo, String materia) {
+        maestro = new Maestro(nombre, apellidos, edad, numMateriasInpartidas, numHorasClase, sueldo, materia);
     }
 
 
@@ -37,11 +36,11 @@ public class Libreria {
                             "Num Horas Impartidas:" + this.maestro.getNumMateriasInpartidas() + "\n" +
                             "Sueldo: " + this.maestro.getSueldo() + "\n" +
                             "Num Horas Clase: " + this.maestro.getNumHorasClase() + "\n" +
-                            "Materias: " + Arrays.toString(this.maestro.getMaterias()) + "\n");
+                            "Materia: "+  this.maestro.getMateria() + "\n");
     }
 
-    public Maestro getMaestro() {
-        return maestro;
+    public String getNombre() {
+        return nombre;
     }
 
     public int getNumLibrosDisponibles() {

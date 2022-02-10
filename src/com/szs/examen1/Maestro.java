@@ -7,7 +7,8 @@ public class Maestro extends Usuarios{
     private double sueldo;
     private String materias[];
 
-    Maestro(String nombre, String apellidos,  int edad, int numMateriasInpartidas, int numHorasClase, double sueldo){
+
+    Maestro(String nombre, String apellidos, int edad, int numMateriasInpartidas, int numHorasClase, double sueldo){
         super(nombre, apellidos, edad);
 
         this.numMateriasInpartidas = numMateriasInpartidas;
@@ -34,4 +35,17 @@ public class Maestro extends Usuarios{
             this.materias[i] = materias[i];
     }
 
+    public String getNombreCompleto(){ return this.getNombreCompleto(); }
+
+    public int getNumMateriasInpartidas() {
+        return numMateriasInpartidas;
+    }
+
+    public int getNumHorasClase() {
+        return numHorasClase;
+    }
+
+    public String[] getMaterias() {
+        return materias;
+    }
 }

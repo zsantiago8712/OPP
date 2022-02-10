@@ -10,7 +10,8 @@ public class Alumno extends Usuarios{
     private double promedio;
     private int numMateriasInscritas;
 
-    Alumno(String nombre, String apellidos,  int edad, String carrera,
+
+    Alumno(String nombre, String apellidos, int edad, String carrera,
            int semestre, double promedio, int numMateriasInscritas){
 
         super(nombre, apellidos, edad);
@@ -31,5 +32,15 @@ public class Alumno extends Usuarios{
         }
         this.setLibrosPrestados(nombreLibro);
         return true;
+    }
+
+     public String getNombreCompleto(){ return this.getNombreCompleto(); }
+
+    public int getSemestre() {
+        return semestre;
+    }
+
+    public int getNumMateriasInscritas() {
+        return numMateriasInscritas;
     }
 }

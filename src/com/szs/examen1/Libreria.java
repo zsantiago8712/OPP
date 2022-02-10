@@ -1,7 +1,5 @@
 package com.szs.examen1;
 
-import java.util.Arrays;
-
 public class Libreria {
 
 
@@ -27,16 +25,20 @@ public class Libreria {
 
 
     public void mostrarUsaurios(){
-        System.out.println("Usuario Alumno: \n" +"Nombre: " + this.alumno.getNombreCompleto() + "\n" +
+        System.out.println("\nUsuario Alumno: \n" +"Nombre: " + this.alumno.getNombreCompleto() + "\n" +
                             "Num Materias Inscritas: " +  this.alumno.getNumMateriasInscritas() + "\n" +
                             "Promedio: " + this.alumno.getPromedio() + "\n" +
-                            "Carrera: " + this.alumno.getCarrera() + "\n");
+                            "Carrera: " + this.alumno.getCarrera() + "\n" +
+                            "Libors Prestados: " );
+        this.alumno.mostrarLibrosPrestados();
 
-        System.out.println("Usuario Maestro: \n" + "Nombre: " + this.maestro.getNombreCompleto() + "\n" +
+        System.out.println("\nUsuario Maestro: \n" + "Nombre: " + this.maestro.getNombreCompleto() + "\n" +
                             "Num Horas Impartidas:" + this.maestro.getNumMateriasInpartidas() + "\n" +
                             "Sueldo: " + this.maestro.getSueldo() + "\n" +
                             "Num Horas Clase: " + this.maestro.getNumHorasClase() + "\n" +
-                            "Materia: "+  this.maestro.getMateria() + "\n");
+                            "Materia: "+  this.maestro.getMateria() + "\n" +
+                            "Libors Prestados: " );
+        this.maestro.mostrarLibrosPrestados();
     }
 
     public String getNombre() {
@@ -45,6 +47,22 @@ public class Libreria {
 
     public int getNumLibrosDisponibles() {
         return numLibrosDisponibles;
+    }
+
+    public void prestamoAlumnos(String nombreLibro){
+
+        if(this.alumno.prestamo(nombreLibro))
+            System.out.println("Se hizo el prestamo correctamente!!");
+        else
+            System.out.println("Ocurrio un error");
+    }
+
+    public void prestamoMaestros(String nombreLibro){
+
+        if(this.maestro.prestamo(nombreLibro))
+            System.out.println("Se hizo el prestamo correctamente!!");
+        else
+            System.out.println("Ocurrio un error");
     }
 
 }

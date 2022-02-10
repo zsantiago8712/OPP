@@ -27,9 +27,10 @@ public class Alumno extends Usuarios{
 
     public boolean prestamo(String nombreLibro){
 
-        if(this.getNumLibrosPrestados() > 3){
+        if(this.getNumLibrosPrestados() > 3)
             return false;
-        }
+
+
         this.setLibrosPrestados(nombreLibro);
         return true;
     }

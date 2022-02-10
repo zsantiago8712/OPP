@@ -32,5 +32,11 @@ public class Usuarios {
 
     public void setLibrosPrestados(String libroPrestado) {
         this.librosPrestados[this.numLibrosPrestados] = libroPrestado;
+        this.numLibrosPrestados += 1;
+    }
+
+    public  void mostrarLibrosPrestados(){
+        for (int i = 0; i < this.numLibrosPrestados; i++)
+            System.out.println(this.librosPrestados[i] + " ,");
     }
 }

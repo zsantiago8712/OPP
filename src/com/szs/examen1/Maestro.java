@@ -1,5 +1,9 @@
 package com.szs.examen1;
 
+/**
+ * @author Santiago Zamora
+ * Regitra usarios tipo maestro
+ */
 public class Maestro extends Usuarios{
 
     private int numMateriasInpartidas;

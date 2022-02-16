@@ -1,5 +1,10 @@
 package com.szs.examen1;
 
+/**
+ * @author Santiago Zamora
+ * Regitra usarios tipo alumno
+ */
+
 public class Alumno extends Usuarios{
 
     private String carrera;
